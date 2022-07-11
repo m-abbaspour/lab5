@@ -57,7 +57,7 @@ export class TableHttp extends Component {
                                 <img src={post.thumbnailUrl}/>      
                             </td>
                             <td>
-                                <button onClick={this.deleteRow(post.id)}>Delete</button>
+                                <button onClick={() => this.deleteRow(post.id)}>Delete</button>
                             </td>
                         </tr>):
                     null
