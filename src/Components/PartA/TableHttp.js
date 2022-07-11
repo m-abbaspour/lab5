@@ -23,12 +23,19 @@ export class TableHttp extends Component {
     
     deleteRow(id){
         axios.delete(`https://jsonplaceholder.typicode.com/photos/${id}`)
-        
-    }
+        .then (response =>{
+            this.setState({posts: this.state.posts.filter(row=> row.id !== id)}) 
+        })
+        .catch (error => {
+            this.setState({errorMessage: 'Error deleting data'})
+        })
+     }
+    
   render() {
-    var{posts} = this.state
+    var{posts, errorMessage} = this.state
     return (
         <>
+        <h1>{errorMessage}</h1>
         <h1>List of Albums</h1>
            <table>
             <thead>
