@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# Lab 5
+### Part 1
+##### REACT application that uses http requests to display data and delete data
+An application that displays a list of photos in a table. The first column includes the ID of the photo, the second column includes the title of the photo, the third column includes the Thumbnail of the photo as an image and the last column includes a “delete” buttons (one for each row). <br>
+For displaying the list of photos, axios get method is used to get the data from https://jsonplaceholder.typicode.com/photos . the call includes the “componentDidMount” function
+Then for the delete row functionality, a new method handler is used for the button click, named “deleteRow” and it will be called on button click. Inside the method “deleteRow”, the axios method “delete” is used and sends the id of the row that the user wants to delete.
+```
+axios.delete(`https://jsonplaceholder.typicode.com/photos/${id}`){}
+```
+In the data in jsonplaceholder, you have the url of the images “thumbnailUrl”, use that to display the images in the third column as the following screenshot.
+A separate css file is used to do the table css. 
+<img src="./DisplayAlbumList_PartA.jpeg">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Part 2
+##### A Simple Sign up form with React JS code
+aanother component that makes it possible to add a new photo to the list of photos. The user only needs to enter the id and the title of the photo.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="./SubmitNewPhoto_PartB.jpeg">
+<img src="./Example_SubmitNewPhoto_PartB.jpeg">
